@@ -1,0 +1,4 @@
+{
+    "vetur.validation.template": false,
+    "go.testFlags": ["-gcflags=-l","--count=1"]
+}
