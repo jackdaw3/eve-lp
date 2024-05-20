@@ -16,8 +16,11 @@ import {
 
 const pathSrc = path.resolve(__dirname, 'src')
 
-// https://vitejs.dev/config/
 export default defineConfig({
+  base: '/serenity/',
+  build: {
+    outDir: 'serenity'
+  },
   resolve: {
     alias: {
       '~/': `${pathSrc}/`,

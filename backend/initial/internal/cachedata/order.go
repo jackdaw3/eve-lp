@@ -36,7 +36,6 @@ func (o *orderData) Refresh() error {
 					log.Errorf(err, "failed to load orders from region %d", region)
 				}
 			}
-			time.Sleep(3 * time.Minute)
 		}
 	}()
 

@@ -18,7 +18,7 @@ mysql:
 redis:
   address: 127.0.0.1:6379
   password: YRzHd/5O2pnm/Ns3wSq1h1pZxU+WDKWpwn0uUHEZ4BOsAffXThtJH/9ag4Ot2tyUWOv2VtUBO/ErD1rcJ0gEeDMrOq8qk7zmd8ogOW0AL7p7L+VxJrLSAvIpwIcjV+2DohRKOeXcBv582h/2NloNXloKhMWUEIFVYMJnsbW2r/E=
-  database: 0
+  database: 1
   refresh: false
   expireTime:
     history: -1
@@ -30,8 +30,8 @@ data:
     path: C://Dev//projects//evelp//scripts//
     refresh: false
   remote: 
-    address: https://esi.evetech.net/latest
-    datasource: tranquility
+    address: https://ali-esi.evepc.163.com/latest
+    datasource: serenity
     refresh: false
 
 crypto:
