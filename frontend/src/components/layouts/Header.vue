@@ -17,8 +17,8 @@
           </span>
           <template #dropdown>
             <el-dropdown-menu>
-              <el-dropdown-item @click="goToTranquility">{{ $t('header.server.Tranquility') }}</el-dropdown-item>
               <el-dropdown-item @click="goToSerenity">{{ $t('header.server.Serenity') }}</el-dropdown-item>
+              <el-dropdown-item @click="goToTranquility">{{ $t('header.server.Tranquility') }}</el-dropdown-item>
             </el-dropdown-menu>
           </template>
         </el-dropdown>
@@ -110,7 +110,7 @@ onBeforeMount(() => {
   }
   languageLabel.value = langLabel(locale.value as Language);
   regionLabel.value = regLabel(regionId.value);
-  serverLabel.value = (t('header.server.Tranquility'))
+  serverLabel.value = (t('header.server.Serenity'))
 })
 
 const iconSrc = computed(() => {

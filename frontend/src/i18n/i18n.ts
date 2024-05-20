@@ -27,7 +27,7 @@ type MessageSchema = typeof en;
 
 
 const i18n = createI18n<[MessageSchema], 'de' | 'en' | 'fr' | 'ja' | 'ru' | 'zh'>({
-  locale: 'en', 
+  locale: 'zh', 
   messages: {
     'de': { ...elementde, ...de }, 
     'en': { ...elementEn, ...en }, 
