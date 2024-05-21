@@ -1,5 +1,5 @@
 export const BACKEND_SERVER = 'https://eve-lp.com/serenity/api/';
-export const ICON_SERVER = 'https://imageserver.eveonline.com/';
+export const ICON_SERVER = 'https://image.evepc.163.com/';
 export const SVG = `
         <path class="path" d="
           M 30 15

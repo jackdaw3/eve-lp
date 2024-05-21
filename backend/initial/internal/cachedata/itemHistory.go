@@ -30,7 +30,7 @@ func (i *itemHistroy) Refresh() error {
 
 func (i *itemHistroy) invoke() func() {
 	return func() {
-		regions := []int{THE_FORGE, DOMAIN, SINQ_LAISION, HEIMATER}
+		regions := []int{THE_FORGE}
 		for _, region := range regions {
 			i.refreshHistoryByRegion(region)
 			time.Sleep(time.Minute * 25)

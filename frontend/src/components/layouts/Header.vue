@@ -36,9 +36,6 @@
           <template #dropdown>
             <el-dropdown-menu>
               <el-dropdown-item command="10000002">{{ $t('header.region.TheForge') }}</el-dropdown-item>
-              <el-dropdown-item command="10000043">{{ $t('header.region.Domain') }}</el-dropdown-item>
-              <el-dropdown-item command="10000032">{{ $t('header.region.SinqLaison') }}</el-dropdown-item>
-              <el-dropdown-item command="10000030">{{ $t('header.region.Heimatar') }}</el-dropdown-item>
             </el-dropdown-menu>
           </template>
         </el-dropdown>
@@ -54,12 +51,8 @@
           </span>
           <template #dropdown>
             <el-dropdown-menu>
-              <el-dropdown-item command="de">Deutsch</el-dropdown-item>
-              <el-dropdown-item command="en">English</el-dropdown-item>
-              <el-dropdown-item command="fr">Français</el-dropdown-item>
-              <el-dropdown-item command="ja">日本語</el-dropdown-item>
-              <el-dropdown-item command="ru">Pусский</el-dropdown-item>
               <el-dropdown-item command="zh">中文</el-dropdown-item>
+              <el-dropdown-item command="en">English</el-dropdown-item>
             </el-dropdown-menu>
           </template>
         </el-dropdown>
@@ -114,14 +107,14 @@ onBeforeMount(() => {
 })
 
 const iconSrc = computed(() => {
-  return isDark.value ? '/github-dark.png' : '/github-light.png';
+  return isDark.value ? '/serenity/github-dark.png' : '/serenity/github-light.png';
 })
 
 watch(locale, (newLocale) => {
   languageLabel.value = langLabel(newLocale as Language);
   localStorage.setItem('language', newLocale);
   regionLabel.value = regLabel(regionId.value);
-  serverLabel.value = (t('header.server.Tranquility'))
+  serverLabel.value = (t('header.server.Serenity'))
 })
 
 watch(regionId, (newRegionId) => {

@@ -46,24 +46,26 @@
                     <el-tab-pane :label="t('config.tableForm.title')" name="second">
                         <el-form label-width="20%" style="margin-top: 2.5%" v-model="form">
                             <el-form-item :label="t('config.tableForm.calculator')">
-                                <el-select :placeholder="t('config.tableForm.calculatorPlaceholder')" v-model="tableForm.calculator"
-                                    style="width: 90%" :suffix-icon="TakeawayBox">
+                                <el-select :placeholder="t('config.tableForm.calculatorPlaceholder')"
+                                    v-model="tableForm.calculator" style="width: 90%" :suffix-icon="TakeawayBox">
                                     <el-option :label="t('config.tableForm.calculatorEnable')" value="true"></el-option>
-                                    <el-option :label="t('config.tableForm.calculatorDisable')" value="false"></el-option>
+                                    <el-option :label="t('config.tableForm.calculatorDisable')"
+                                        value="false"></el-option>
                                 </el-select>
                             </el-form-item>
                             <el-form-item :label="t('config.tableForm.layout')">
-                                <el-select :placeholder="t('config.tableForm.calculatorPlaceholder')" v-model="tableForm.layout"
-                                    style="width: 90%" :suffix-icon="List">
+                                <el-select :placeholder="t('config.tableForm.calculatorPlaceholder')"
+                                    v-model="tableForm.layout" style="width: 90%" :suffix-icon="List">
                                     <el-option :label="t('config.tableForm.layoutAuto')" value="auto"></el-option>
                                     <el-option :label="t('config.tableForm.layoutFixed')" value="fixed"></el-option>
                                 </el-select>
                             </el-form-item>
                             <el-form-item :label="t('config.tableForm.highlight')">
-                                <el-select :placeholder="t('config.tableForm.highlightPlaceholder')" v-model="tableForm.highlight"
-                                    style="width: 90%" :suffix-icon="Opportunity">
+                                <el-select :placeholder="t('config.tableForm.highlightPlaceholder')"
+                                    v-model="tableForm.highlight" style="width: 90%" :suffix-icon="Opportunity">
                                     <el-option :label="t('config.tableForm.highlightEnable')" value="true"></el-option>
-                                    <el-option :label="t('config.tableForm.highlightDisable')" value="false"></el-option>
+                                    <el-option :label="t('config.tableForm.highlightDisable')"
+                                        value="false"></el-option>
                                 </el-select>
                             </el-form-item>
                         </el-form>
@@ -436,7 +438,11 @@ const getCorporationName = (itemId: string) => {
 }
 
 function getIcon(id: string): string {
-    return `${ICON_SERVER}Corporation/${id}_32.png`;
+    if (id.toString().startsWith("5")) {
+        return `${ICON_SERVER}Alliance/${id}_32.png`;
+    } else {
+        return `${ICON_SERVER}Corporation/${id}_32.png`;
+    }
 }
 
 function taxFormat(e: number): string {

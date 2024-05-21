@@ -28,7 +28,7 @@ type orderData struct {
 }
 
 func (o *orderData) Refresh() error {
-	regions := []int{THE_FORGE, DOMAIN, SINQ_LAISION, HEIMATER}
+	regions := []int{THE_FORGE}
 	go func() {
 		for {
 			for _, region := range regions {
